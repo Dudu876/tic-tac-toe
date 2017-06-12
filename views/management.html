@@ -1,0 +1,17 @@
+<div class="management">
+    <table ng-show="labels.length" class="table table-bordered ">
+        <thead>
+            <tr>
+                <th>Players List</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="label in labels">
+                <td><a href="/players/{{ label }}">{{label}}</a> <span><button class="btn btn-xs" ng-click="delete(label)">X</button></span></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div class="chart">
+    <canvas id="bar" class="chart chart-bar" chart-data="data" chart-labels="labels" chart-series="series"></canvas>
+</div>

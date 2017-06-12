@@ -1,0 +1,26 @@
+<div class="game-container">
+    <h1 style="position: relative;"> Tic Tac Toe
+        <span>
+            <button ng-click="reset()">Reset</button>
+        </span>
+    </h1>
+
+    <table class="game">
+        <tr>
+            <td ng-click="move(0,0)">{{board[0][0]}}</td>
+            <td ng-click="move(0,1)">{{board[0][1]}}</td>
+            <td ng-click="move(0,2)">{{board[0][2]}}</td>
+        </tr>
+        <tr>
+            <td ng-click="move(1,0)">{{board[1][0]}}</td>
+            <td ng-click="move(1,1)">{{board[1][1]}}</td>
+            <td ng-click="move(1,2)">{{board[1][2]}}</td>
+        </tr>
+        <tr>
+            <td ng-click="move(2,0)">{{board[2][0]}}</td>
+            <td ng-click="move(2,1)">{{board[2][1]}}</td>
+            <td ng-click="move(2,2)">{{board[2][2]}}</td>
+        </tr>
+    </table>
+    <p>{{players[turn%2]}}'s turn</p>
+</div>

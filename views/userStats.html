@@ -1,0 +1,21 @@
+<div>
+    <label for="userSelect">Select user </label>
+    <select id="userSelect" ng-options="user for user in users" ng-model="selectedUser" ng-change="update()">
+    </select>
+    <table ng-show="userStats" class="table table-bordered stats">
+        <thead>
+            <tr>
+                <th>Winner</th>
+                <th>Loser</th>
+                <th>Tie?</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="stat in userStats">
+                <td>{{stat.winner}}</td>
+                <td>{{stat.loser}}</td>
+                <td>{{stat.tie}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

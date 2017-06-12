@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en" ng-app="myApp">
+
+<head>
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
+    <base href="/">
+
+    <title>myApp</title>
+
+    <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/public/stylesheets/style.css">
+
+    <script src="/bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="/bower_components/angular/angular.min.js"></script>
+    <script src="/bower_components/angular-route/angular-route.js"></script>
+    <script src="/bower_components/chart.js/dist/Chart.min.js"></script>
+    <script src="/bower_components/angular-chart.js/dist/angular-chart.min.js"></script>
+
+    <script src="myApp.js"></script>
+    <script src="appRoutes.js"></script>
+
+    <script src="/controllers/mainCtrl.js"></script>
+    <script src="/controllers/statsCtrl.js"></script>
+    <script src="/controllers/rankCtrl.js"></script>
+    <script src="/controllers/managementCtrl.js"></script>
+    <script src="/controllers/playerCtrl.js"></script>
+
+    <script src="/services/dataService.js"></script>
+
+</head>
+
+<body>
+
+    <div>
+
+        <nav>
+            <a href="/">Game</a> |
+            <a href="/userstats">User Games</a> |
+            <a href="/management">Management</a> |
+            <a href="/rank">Ranking Table</a>
+        </nav>
+
+        <div class="container" ng-view></div>
+
+    </div>
+
+</body>
+
+</html>

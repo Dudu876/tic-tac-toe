@@ -1,0 +1,18 @@
+<table ng-show="ranks.length" class="table table-bordered stats">
+    <thead>
+        <tr>
+            <th>Rank</th>
+            <th>Player</th>
+            <th>Points</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="rank in ranks">
+            <td>{{rank.rank}}</td>
+            <td>{{rank.player}}</td>
+            <td>{{rank.points}}</td>
+        </tr>
+    </tbody>
+</table>
+<button ng-show="ranks.length" class="btn" ng-click="newLeague()">New League season</button>
+<h2 ng-hide="ranks.length">No games in current season</h2>
